@@ -1,0 +1,1 @@
+This is a test file for SME IAM S3 access demonstration.

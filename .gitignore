@@ -1,0 +1,15 @@
+# AWS credentials
+*.csv
+*.env
+credentials.txt
+
+# OS / Editor files
+.DS_Store
+*.swp
+*.tmp
+
+# Log files
+*.log
+
+# Ignore anything else temporary
+temp/
