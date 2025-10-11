@@ -10,7 +10,8 @@ their IAM policies.
 I Created users and groups with personalized policies:
 - **smeuser** (Admin)
 - Policy: Full access
-- Notes: Can read/write SME bucket
+- Notes: Can read/write SME bucket  
+
 
 - **Ben** (Finance)
 - Policy: 'FinanceReportReadOnlyPolicy'
@@ -25,7 +26,7 @@ A temporary developer role was created:
 
 - **Role Name:** DeveloperTemporaryRole  
 - **Policy Assigned:** DeveloperTemporaryPolicy  
-- **Purpose:** Allows developers limited access to their own testing bucket while preventing access to SME or Finance buckets.  
+- **Purpose:** Allows developer limited access to their own testing bucket while preventing access to SME or Finance buckets.  
 
 *This demonstrates role-based access control (RBAC) for SMEs.*
 
@@ -35,7 +36,7 @@ A temporary developer role was created:
 Buckets created for the project:
 - smelog-bucket
 - finance-logs-bucket
-- developer-demo-bucket123
+- developer-demo-bucket123  
 *Each bucket is configured according to access requirements for the respective users/roles.*
 
 ---
@@ -85,15 +86,26 @@ Chmod +x simulate-access.sh
 - SME user: Allowed to read/write on smelog-bucket
 - Ben (Finance user): Can read finance-logs-bucket, but writing is denied
 - DeveloperTemporaryRole: Can create/list objects in developer-demo-bucket123 only but cannot access SME or Finance buckets
+---
+
 *Terminal  output Screenshots:
 ### 1. SME User Upload Test
-![SME User Upload](./images/SME User Upload Outcome.png)
+<p align="center">
+<img src="images/SME User Upload Outcome.png"
+width="800">
+</p>
 
 ### 2. DeveloperTemporaryRole Access Test
-![Developer Access](./images/DeveloperTemporaryRole Access Outcome.png)
+<p align="center">
+<img src="images/DeveloperTemporaryRole Access Outcome.png"
+width="800">
+</p>
 
 ### 3. Ben Denied Write Test
-![Ben Denied Access](./images/Ben Denied Write Outcome.png)
+<p align="center">
+<img src="images/Ben Denied Write Outcome.png"
+width="800">
+</p>
 
 
 
