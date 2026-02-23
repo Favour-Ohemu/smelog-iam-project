@@ -9,37 +9,32 @@ their IAM policies.
 ### 1. IAM Users & Groups
 I Created users and groups with personalized policies:
 - **smeuser** (Admin)
-- Policy: Full access
-- Notes: Can read/write SME bucket  
+ --Policy: Full access
+ Notes: Can read/write SME bucket  
 
 
 - **Ben** (Finance)
-- Policy: 'FinanceReportReadOnlyPolicy'
-- Notes: can only read finace reports
+ Policy: 'FinanceReportReadOnlyPolicy'
+ Notes: can only read finance reports
 
-*Users belong to groups, and groups have policies attached to enforce least privilege.*
 
----
 
 ### 2. IAM Role
 A temporary developer role was created:
 
-- **Role Name:** DeveloperTemporaryRole  
-- **Policy Assigned:** DeveloperTemporaryPolicy  
-- **Purpose:** Allows developer limited access to their own testing bucket while preventing access to SME or Finance buckets.  
+ **Role Name:** DeveloperTemporaryRole  
+ **Policy Assigned:** DeveloperTemporaryPolicy  
+ **Purpose:** Allows developer limited access to their own testing bucket while preventing access to SME or Finance buckets.  
 
-*This demonstrates role-based access control (RBAC) for SMEs.*
 
----
+
 
 ### 3. S3 Buckets
 Buckets created for the project:
 - smelog-bucket
 - finance-logs-bucket
 - developer-demo-bucket123  
-*Each bucket is configured according to access requirements for the respective users/roles.*
 
----
 
 ### 4. AWS CLI & jq Installation
 - Installed **AWS CLI** to interact with AWS via terminal.  
@@ -55,18 +50,17 @@ Buckets created for the project:
   - DeveloperTemporaryRole:
     - Can access `developer-demo-bucket123` for testing  
     - **Cannot read/write to smelog-bucket or finance-logs-bucket** (AccessDenied)  
-- Outputs clearly show **AccessAllowed vs AccessDenied** events.
+- Outputs show **AccessAllowed vs AccessDenied** events.
 
----
 
 ### 6. Test File
 - 'testfile.txt' is used as a placeholder for s3 uploads
 - e.g This is a test file for SME IAM S3 demonstration
 - place this file in the same folder as 'simulate-access.sh' before running the script.
 
----
 
-## Execution Sequence
+
+## How to run
 1. Create IAM users/groups and assign policies (AWS Console)
 2. Create IAM role and assign role policy (AWS Console)
 3. Create S3 buckets (AWS Console)
@@ -86,7 +80,7 @@ Chmod +x simulate-access.sh
 - SME user: Allowed to read/write on smelog-bucket
 - Ben (Finance user): Can read finance-logs-bucket, but writing is denied
 - DeveloperTemporaryRole: Can create/list objects in developer-demo-bucket123 only but cannot access SME or Finance buckets
----
+  
 
 *Terminal  output Screenshots:
 ### 1. SME User Upload Test
