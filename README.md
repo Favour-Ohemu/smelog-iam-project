@@ -40,7 +40,7 @@ Buckets created for the project:
 - Installed **AWS CLI** to interact with AWS via terminal.  
 - Installed **jq** to parse JSON outputs for script automation.  
 
----
+
 
 ### 5. Script
 - `simulate-access.sh` simulates access by different users and roles.  
@@ -74,7 +74,7 @@ Chmod +x simulate-access.sh
 8. Run the script: ./simulate-access.sh
 9. Observe the output showing which users/roles are allowed or denied access
 
----
+
 
 ### 8. Expected Outcome
 - SME user: Allowed to read/write on smelog-bucket
