@@ -82,7 +82,7 @@ Chmod +x simulate-access.sh
 - DeveloperTemporaryRole: Can create/list objects in developer-demo-bucket123 only but cannot access SME or Finance buckets
   
 
-* Terminal  output Screenshots:
+*Terminal  output Screenshots:
 ### 1. SME User Upload Test
 <p align="center">
 <img src="images/SME User Upload Outcome.png"
