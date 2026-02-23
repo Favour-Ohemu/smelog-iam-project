@@ -76,7 +76,7 @@ Chmod +x simulate-access.sh
 
 
 
-### 8. Expected Outcome
+## Expected Outcome
 - SME user: Allowed to read/write on smelog-bucket
 - Ben (Finance user): Can read finance-logs-bucket, but writing is denied
 - DeveloperTemporaryRole: Can create/list objects in developer-demo-bucket123 only but cannot access SME or Finance buckets
